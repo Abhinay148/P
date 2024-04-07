@@ -5,13 +5,7 @@ const nodemailer = require("nodemailer");
 
 // server used to send send emails
 const app = express();
-app.use(cors(
-  {
-  origin:["https://portfolio-api-two-mu.vercel.app/"],
-  methods:["POST","GET"],
-  credentials:true
-  }
-));
+app.use(cors());
 app.use(express.json());
 app.use("/", router);
 app.listen(5000, () => console.log("Server Running"));
