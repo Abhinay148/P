@@ -1,0 +1,186 @@
+.home {
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    color: #06f4e4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.home-content {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-box,
+.social-icons {
+    align-self: center; /* Align items to the right within .home-content */
+}
+.home-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.home-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.change-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.change-text h3 {
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+    padding: 5px;
+}
+
+.change-text h3 .word {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+}
+.change-text h3 .word .letter {
+    transform-origin: center center 25px;
+}
+
+.change-text h3 .word .letter.out {
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+
+.change-text h3 .word .letter.in {
+    transition: 0.38s ease;
+}
+
+.change-text h3 .word .letter.behind {
+    transform: rotateX(-90deg);
+}
+
+.btn-box {
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+    width: 320px;
+    height: 45px;
+}
+
+.btn-box .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #06f4e4;
+    color: black;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .6s;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-box .btn:hover {
+    color: #06f4e4;
+    cursor: pointer;
+}
+
+.btn-box .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .4s;
+}
+
+.btn-box .btn:hover::before {
+    width: 100%;
+}
+
+
+.social-icons {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    height: 40px;
+}
+
+.icon-box {
+    background-color: #06f4e4;
+    color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px; /* Adjust as needed */
+}
+
+.icon-box:hover {
+    cursor: pointer;
+    color: #06f4e4;
+    background: black;
+}
+
+.img-box {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; /* To prevent image overflow */
+    margin: auto; /* Center the image horizontally */
+}
+
+.img-box img {
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .home-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+        align-self: flex-start;
+    }
+    .home-image {
+        max-width: 100%;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .btn-box {
+        width: 200px;
+        font-size: 0.9rem;
+    }
+    .change-text{
+        font-size: 15px;
+    }
+}
+@media (min-width: 991px) {
+    .change-text {
+        margin-left: 40%; /* Add left margin of 100px */
+    }
+}
