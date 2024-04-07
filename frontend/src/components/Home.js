@@ -10,7 +10,7 @@ const Home = () => {
     };
 
     const handleDownloadResumeClick = () => {
-        const resumeUrl = 'https://firebasestorage.googleapis.com/v0/b/github-da89c.appspot.com/o/Resume.pdf?alt=media&token=49bf9c4d-ce5c-4e80-8a44-71b6e923b806';
+        const resumeUrl = 'https://firebasestorage.googleapis.com/v0/b/github-da89c.appspot.com/o/Resume.pdf?alt=media&token=92588762-cdc0-44de-903d-dfd96c7d91b0';
         window.open(resumeUrl, '_blank');
     };
     const handleHireMeClick = () => {
